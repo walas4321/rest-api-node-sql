@@ -8,7 +8,7 @@ const dbSettings = {
     // server: "192.168.4.252",
     // database: 'SIS_INTEGRADO_TESTEO',
     user: config.dbUser, 
-    password: config.dbPassword, 
+    password: config.dbPassword,   
     server: config.dbServer,
     database: config.dbDatabase,
     options: {
