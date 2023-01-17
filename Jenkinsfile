@@ -17,7 +17,7 @@ pipeline {
         stage("paso 1"){
             steps {
                 script {
-                    sh "echo 'Hola mundo'"
+                    echo "echo 'Hola mundoOOOO'"
                 }
             }
         }
@@ -25,13 +25,13 @@ pipeline {
 
     post {
         always {
-            sh "echo 'fase always'"
+            echo "echo 'fase alwaysSSSSSS'"
         }
         success {
-            sh "echo 'fase success'"
+            echo "echo 'fase successSSSS'"
         }
         failure {
-            sh "echo 'fase failure'"
+            echo "echo 'fase failureEEEE'"
         }
     }
 
