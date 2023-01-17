@@ -1,24 +1,37 @@
-pipeline {
-    agent any
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello Wallas alberto aaaa'
-            }
-        }
-    }
-}
-
-
 // pipeline {
 //     agent any
 //     stages {
-//         stage('Paso 1 ') {
+//         stage('Hello') {
 //             steps {
-//                 script {
-//                     sh "echo 'hola mundo'"
-//                 }
+//                 echo 'Hello Wallas alberto aaaa'
+//                 //sh "echo 'hola mundo'"
 //             }
 //         }
 //     }
 // }
+
+
+pipeline {
+    stages {
+        stage("paso 1"){
+            steps {
+                script {
+                    sh "echo 'Hola mundo'"
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            sh "echo 'fase always'"
+        }
+        success {
+            sh "echo 'fase success'"
+        }
+        failure {
+            sh "echo 'fase failure'"
+        }
+    }
+
+}
